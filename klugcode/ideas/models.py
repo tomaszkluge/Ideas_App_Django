@@ -18,7 +18,7 @@ class Idea(models.Model):
         return self.title
 
 
-class Vote(models.Model):
+class Comment(models.Model):
     idea = models.ForeignKey(Idea, on_delete=models.CASCADE)
     reason = models.TextField()
 
