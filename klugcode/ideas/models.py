@@ -22,6 +22,10 @@ class Comment(models.Model):
     idea = models.ForeignKey(Idea, on_delete=models.CASCADE)
     reason = models.TextField()
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(args, kwargs)
+        self.id = None
+
     def __str__(self):
         return f'ID {self.id}'
 
