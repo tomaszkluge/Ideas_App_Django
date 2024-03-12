@@ -7,5 +7,6 @@ router.register(r'ideas', IdeaViewSet)
 router.register(r'comment', CommentViewSet)
 
 urlpatterns = [
-    path('api/', include(router.urls))
+    path('api/', include(router.urls)),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
