@@ -6,3 +6,8 @@ class IdeaViewSet(viewsets.ModelViewSet):
     queryset = Idea.objects.all()
     serializer_class = IdeaSerializer
 
+
+class CommentViewSet(viewsets.ModelViewSet):
+    queryset = Comment.objects.all()
+    serializer_class = CommentSerializer
+
